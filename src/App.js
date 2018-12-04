@@ -1,14 +1,10 @@
 import React from 'react';
-import { Button } from 'primereact/button'
+import Auth from "./components/Auth"
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <Button />
-        </header>
-      </div>
+          <Auth />
     );
   }
 }
