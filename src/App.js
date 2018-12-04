@@ -1,5 +1,6 @@
 import React from 'react';
-import Auth from "./components/Auth"
+import AuthContainer from './containers/AuthContainer'
+import AppContainer from './containers/AppContainer'
 
 class App extends React.Component {
   render() {

@@ -1,9 +1,6 @@
-import { 
-  Button
-} from 'primereact/button' 
-// import * from 'primeicons' 
+import Auth from './Auth'
 
 
-export default Button
+export { Auth }
 
 
