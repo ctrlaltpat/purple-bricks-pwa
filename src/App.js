@@ -1,6 +1,5 @@
 import React from 'react';
-
-import {Button} from 'primereact/button';
+import { Button } from 'primereact/button'
 
 class App extends React.Component {
   render() {
