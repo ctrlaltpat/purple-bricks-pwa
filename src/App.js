@@ -4,7 +4,7 @@ import Auth from "./components/Auth"
 class App extends React.Component {
   render() {
     return (
-          <Auth />
+        localStorage.getItem("token") ? <AppContainer /> : <AuthContainer />
     );
   }
 }
