@@ -15,7 +15,7 @@ code {
 
 #App {
   display: flex;
-  max-width: 360px;
+  /* max-width: 360px; */
   margin: 0 auto;
   min-height: 100vh;
   flex-direction: column;
