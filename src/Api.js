@@ -113,7 +113,8 @@ export default class Api {
     // Housedata should be structured as such { location, rooms, property }.
     // Property has specific list
     static findTarget = (housedata) => {
-        return fetch(baseurl + "house", {
+        return fetch(baseurl + "getHouse", {
+            method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": localStorage.getItem("token")

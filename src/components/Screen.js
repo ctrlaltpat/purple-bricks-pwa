@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Home from './Home'
 import Settings from './Settings'
+import { MapView } from '.';
 
 
 const Screen = ({tab}) => {
@@ -10,7 +11,7 @@ const Screen = ({tab}) => {
     case "Home":
       return <div id="content" className="home"> <Home /> </div>
     case "Search":
-      return <div id="content" className="search"> Search </div>
+      return <div id="content" className="search"> <MapView /> </div>
     case "Dashboard":
       return <div id="content" className="dashboard"> dashboard </div>
     case "Settings":
