@@ -23,10 +23,8 @@ export default class MapView extends React.Component {
     render(){
         return(
             <React.Fragment>
-                <div style={{alignContent: "center", alignItems: "center"}}>
                     <Input placeholder="Postcode" onChange={this.handleSearch}
                     action={<Button color="purple" icon="search" content="Search" onClick={this.handleClick} />} />
-                </div>
                 <div style={{ height: "80%", width: "100%" }}>
                     <GoogleMapReact 
                     bootstrapURLKeys= {{ key: "AIzaSyBPzd82GVcFxlG_y97-IJmgAujkqCB0Fqs" }}

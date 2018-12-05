@@ -47,6 +47,11 @@ header {
   background-image: url('./assets/bg1.jpg');
   background-size: cover;
   background-position: center;
+}
+#content.search {
+  align-items: unset;
+  padding-top: 20px;
+  text-align: center;
 
 }
 
