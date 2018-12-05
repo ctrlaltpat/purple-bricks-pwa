@@ -193,10 +193,22 @@ export default class MapView extends React.Component {
         this.setState({ postcode: postcode.target.value })
     }
 
+    createTarget = () => {
+        Api.setTarget({ target: parseInt(this.state.info.data.average) * 0.25, saving: this.props.saving, postcode: this.state.postcode, rooms: 1, property: "flat" })
+    }
+
     handleClick = () => {
         Api.findTarget({ postcode: this.state.postcode, rooms: 1, property: "flat" })
         .then(resp => resp.json())
         .then(resp => this.setState({ location: { lat: resp.data.raw_data[0].lat, lng: resp.data.raw_data[0].lng}, card:true, info: resp}))
+    }
+
+    renderMarkers(map, maps) {
+        if (this.state.card) {
+            let marker = new maps.Marker({
+                position: this.state.location,
+                map
+            })}
     }
 
     render(){
@@ -204,6 +216,7 @@ export default class MapView extends React.Component {
             panControl: false,
             mapTypeControl: false,
             scrollwheel: false,
+            fullscreenControl: false,
             styles: mapStyles
         };
         return(
@@ -218,6 +231,8 @@ export default class MapView extends React.Component {
                 bootstrapURLKeys= {{ key: "AIzaSyBPzd82GVcFxlG_y97-IJmgAujkqCB0Fqs" }}
                 center = {this.state.location}
                 defaultZoom={12}
+                onGoogleApiLoaded={({map, maps}) => this.renderMarkers(map, maps)}
+                yesIWantToUseGoogleMapApiInternals
                 />
                 {this.state.card 
                 ? <Card>
@@ -226,11 +241,14 @@ export default class MapView extends React.Component {
                         {this.state.info.postcode}
                     </Card.Header>
                     <Card.Meta>
-                        Average Cost: £{this.state.info.data.average}
+                        Average Cost: <span>£{this.state.info.data.average}</span>
                     </Card.Meta>
                     <Card.Meta>
-                        Estimated Deposit: £{parseInt(this.state.info.data.average) * 0.25}
+                        Estimated Deposit: <span>£{parseInt(this.state.info.data.average) * 0.25}</span>
                     </Card.Meta>
+                </Card.Content>
+                <Card.Content extra>
+                    <Button icon="heart" color="purple" onClick={this.createTarget} />
                 </Card.Content>
             </Card>
             : null

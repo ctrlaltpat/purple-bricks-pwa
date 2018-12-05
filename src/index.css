@@ -1,9 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -71,12 +69,19 @@ header {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  
+  bottom: 25px;
+  margin: 0 auto;
 }
 .ui.card.show {
   opacity: 1;
   bottom: 20%;
+}
+.ui.card .meta {
+  color: darkolivegreen;
+}
+.ui.card .meta span {
+  color: #6F58C9;
+  font-weight: bold;
 }
 
 .search-bar {
@@ -186,6 +191,19 @@ footer .ui.menu .active.item>i.icon {
   font-size: 16px;
   line-height: normal;
   vertical-align: middle;
+}
+
+#home-container {
+  position: relative;
+}
+#home-container .ui.card {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+#home-container .ui.card .ui.header {
+  color: #6F58C9;
 }
 
 /*Chrome,Safari*/
