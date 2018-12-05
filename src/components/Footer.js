@@ -1,9 +1,10 @@
 import React from 'react'
+import Navigation from './Navigation'
 
-const Footer = ({ tab }) => {
+const Footer = ({ tab, handlePage }) => {
   return (
     <footer>
-      beep boop
+      <Navigation handlePage={handlePage} tab={tab}/>
     </footer>
   )
 }

@@ -16,9 +16,9 @@ export default class AppContainer extends Component {
   render() {
     return (
       <div id="App">
-        <Header tab={this.state.activepage} handlePage={this.handlePage}/>
+        <Header tab={this.state.activepage}/>
         <Screen tab={this.state.activepage}/>
-        <Footer tab={this.state.activepage}/>
+        <Footer tab={this.state.activepage} handlePage={this.handlePage}/>
       </div>
     )
   }
