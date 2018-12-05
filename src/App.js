@@ -5,7 +5,7 @@ import Api from './Api'
 
 class App extends React.Component {
   state = {
-    signedin: false
+    signedin: localStorage.getItem("token") ? true : false
   }
 
   handleSignin = () => {
