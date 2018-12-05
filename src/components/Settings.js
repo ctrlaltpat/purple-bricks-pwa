@@ -1,22 +1,16 @@
 import React, { Component } from 'react'
-import { Grid, Image, Segment } from 'semantic-ui-react';
+// import { Grid, Segment } from 'semantic-ui-react';
 
 class Settings extends Component {
   render() {
     return (
-      <Grid>
-        <Grid.Row columns={2}>
-          <Grid.Column>
-            <Segment/>
-          </Grid.Column>
-          <Grid.Column>
-            
-          </Grid.Column>
-          <Grid.Column>
-            
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <div className="grid">
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="box"></div>
+        <div className="stretch"></div>
+      </div>
     )
   }
 }
