@@ -7,7 +7,7 @@ import GoogleMapReact from 'google-map-react'
 export default class MapView extends React.Component {
     state = {
         postcode: null,
-        location: { lat: null, lng: null },
+        location: { lat: 51.5287718, lng: -0.2416815 },
     }
 
     handleSearch = (postcode) => {
@@ -22,17 +22,18 @@ export default class MapView extends React.Component {
 
     render(){
         return(
-            <React.Fragment>
+            <div className="mapview-container">
+                <div className="search-bar">
                     <Input placeholder="Postcode" onChange={this.handleSearch}
                     action={<Button color="purple" icon="search" content="Search" onClick={this.handleClick} />} />
-                <div style={{ height: "80%", width: "100%" }}>
-                    <GoogleMapReact 
-                    bootstrapURLKeys= {{ key: "AIzaSyBPzd82GVcFxlG_y97-IJmgAujkqCB0Fqs" }}
-                    defaultCenter= {this.state.location}
-                    defaultZoom={11}
-                    />
+                    <br/>
                 </div>
-            </React.Fragment>
+                <GoogleMapReact 
+                bootstrapURLKeys= {{ key: "AIzaSyBPzd82GVcFxlG_y97-IJmgAujkqCB0Fqs" }}
+                defaultCenter= {this.state.location}
+                defaultZoom={11}
+                />
+            </div>
         )
     }
 }
