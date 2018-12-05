@@ -12,3 +12,67 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  background-color:  #6F58C9;
+  color: #FFF;
+}
+
+#content {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('./assets/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70px;
+  width: 100%;
+  text-align: center;
+  background-color: #6F58C9;
+  color: #FFF;
+}
+
+#home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+
+.house {
+  display: flex;
+  margin: 0 auto;
+  height: 365px;
+  width: 280px;
+  background-color: rgba(0,0,0,0.1);
+  -webkit-clip-path: polygon(38px 273px,237px 273px,235px 111px,266px 109px,216px 71px,216px 29px,192px 29px,193px 57px,130px 3px,1px 115px,34px 114px,35px 272px);
+  clip-path: polygon(38px 273px,237px 273px,235px 111px,266px 109px,216px 71px,216px 29px,192px 29px,193px 57px,130px 3px,1px 115px,34px 114px,35px 272px);
+}
+
+/*Chrome,Safari*/
+/* -webkit-clip-path: polygon(38px 273px,237px 273px,235px 111px,266px 109px,216px 71px,216px 29px,192px 29px,193px 57px,130px 3px,1px 115px,34px 114px,35px 272px);
+clip-path: url("#clipPolygon"); */
