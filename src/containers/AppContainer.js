@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 export default class AppContainer extends Component {
 
   state = {
-      activepage: "Home"
+      activepage: "Search"
   }
 
   handlePage = (activepage) => {
