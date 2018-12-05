@@ -5,6 +5,14 @@ import Footer from '../components/Footer'
 
 export default class AppContainer extends Component {
 
+  state = {
+      activepage: ""
+  }
+
+  handlePage = (activepage) => {
+      this.setState({ activepage })
+  }
+
   render() {
     return (
       <div id="App">
