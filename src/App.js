@@ -1,6 +1,7 @@
 import React from 'react';
 import AuthContainer from './containers/AuthContainer'
 import AppContainer from './containers/AppContainer'
+import Api from './Api'
 
 class App extends React.Component {
   state = {
@@ -13,7 +14,7 @@ class App extends React.Component {
 
   render() {
     return (
-        localStorage.getItem("token") ? <AppContainer /> : <AuthContainer handleSignin={this.handleSignin} />
+        localStorage.getItem("token") && Api.validateUser() ? <AppContainer /> : <AuthContainer handleSignin={this.handleSignin} />
     );
   }
 }
