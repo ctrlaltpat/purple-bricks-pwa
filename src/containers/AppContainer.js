@@ -13,7 +13,7 @@ export default class AuthContainer extends React.Component {
     render(){
         return(
            <div>
-               Yay
+               <Components.Dashboard />
            </div>
         )
     }
