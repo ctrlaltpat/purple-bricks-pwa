@@ -68,9 +68,34 @@ footer {
   margin: 0 auto;
   height: 365px;
   width: 280px;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(189,237,224,0.4);
   -webkit-clip-path: polygon(38px 273px,237px 273px,235px 111px,266px 109px,216px 71px,216px 29px,192px 29px,193px 57px,130px 3px,1px 115px,34px 114px,35px 272px);
   clip-path: polygon(38px 273px,237px 273px,235px 111px,266px 109px,216px 71px,216px 29px,192px 29px,193px 57px,130px 3px,1px 115px,34px 114px,35px 272px);
+}
+.bricks {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+.brick {
+  flex: 0 1 calc(15% - 8px);
+  /* display: block; */
+  background-color: #6F58C9;
+  /* width: 10%; */
+  height: 15px;
+  border: 1px solid #BBDBD1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* float: left; */
+}
+.brick:nth-of-type(odd) {
+  flex: 0 1 calc(15% - 9px);
 }
 
 /*Chrome,Safari*/

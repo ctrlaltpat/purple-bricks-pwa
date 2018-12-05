@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = ({ tab }) => {
   return (
     <footer>
-      {tab}
+      beep boop
     </footer>
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import Navigation from './Navigation'
 
-const Header = ({ tab }) => {
+const Header = ({ tab, handlePage }) => {
   return (
     <header>
-      {tab}
+      <Navigation handlePage={handlePage} tab={tab}/>
     </header>
   )
 }

@@ -6,7 +6,7 @@ import Footer from '../components/Footer'
 export default class AppContainer extends Component {
 
   state = {
-      activepage: ""
+      activepage: "Home"
   }
 
   handlePage = (activepage) => {
@@ -16,9 +16,9 @@ export default class AppContainer extends Component {
   render() {
     return (
       <div id="App">
-        <Header tab={"Home"}/>
-        <Screen tab={"Home"}/>
-        <Footer tab={"Home"}/>
+        <Header tab={this.state.activepage} handlePage={this.handlePage}/>
+        <Screen tab={this.state.activepage}/>
+        <Footer tab={this.state.activepage}/>
       </div>
     )
   }
